@@ -19,16 +19,15 @@ export class FirehoseSubscription extends FirehoseSubscriptionBase {
     const postsToDelete = ops.posts.deletes.map((del) => del.uri)
     const postsToCreate = ops.posts.creates
       .filter((create) => {
+        if (create.record.langs?.find((lang) => lang === 'ja')) {
         if (create.record.text.toLowerCase().includes(' #NowPlaying ')) {
           return true
           }
           if (create.record.text.toLowerCase().includes(' #nowplaying ')) {
           return true
           }
-          if (create.record.langs?.find((lang) => lang === 'ja')) {
-            return true
-          }
-          return false
+        }
+        return false
       })
       .map((create) => {
         // map alf-related posts to a db row
