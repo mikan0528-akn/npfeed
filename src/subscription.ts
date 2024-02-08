@@ -20,10 +20,10 @@ export class FirehoseSubscription extends FirehoseSubscriptionBase {
     const postsToCreate = ops.posts.creates
       .filter((create) => {
         if (create.record.langs?.find((lang) => lang === 'ja')) {
-        if (create.record.text.toLowerCase().includes(' #NowPlaying ')) {
+        if (create.record.text.toLowerCase().includes('#NowPlaying')) {
           return true
           }
-          if (create.record.text.toLowerCase().includes(' #nowplaying ')) {
+          if (create.record.text.toLowerCase().includes('#nowplaying')) {
           return true
           }
         }
