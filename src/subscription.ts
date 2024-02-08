@@ -25,9 +25,14 @@ export class FirehoseSubscription extends FirehoseSubscriptionBase {
           if (create.record.text.toLowerCase().includes(' #nowplaying ')) {
           return true
           }
+          if (create.record.langs?.find((lang) => lang === 'ja')) {
+            return true
+          }
           return false
       })
       .map((create) => {
+        console.log(create.record.langs)
+
         // map alf-related posts to a db row
         return {
           uri: create.uri,
