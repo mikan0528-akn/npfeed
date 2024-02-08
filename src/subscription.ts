@@ -31,8 +31,6 @@ export class FirehoseSubscription extends FirehoseSubscriptionBase {
           return false
       })
       .map((create) => {
-        console.log(create.record.langs)
-
         // map alf-related posts to a db row
         return {
           uri: create.uri,
