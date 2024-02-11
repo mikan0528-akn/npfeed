@@ -4640,7 +4640,7 @@ export const schemaDict = {
           description: {
             type: 'string',
             maxGraphemes: 300,
-            maxLength: 3000,
+            maxLength: 4000,
           },
           descriptionFacets: {
             type: 'array',
@@ -4804,7 +4804,7 @@ export const schemaDict = {
             description: {
               type: 'string',
               maxGraphemes: 300,
-              maxLength: 3000,
+              maxLength: 4000,
             },
             descriptionFacets: {
               type: 'array',
@@ -5594,7 +5594,7 @@ export const schemaDict = {
           properties: {
             text: {
               type: 'string',
-              maxLength: 3000,
+              maxLength: 4000,
               maxGraphemes: 300,
             },
             entities: {
@@ -5939,7 +5939,7 @@ export const schemaDict = {
           description: {
             type: 'string',
             maxGraphemes: 300,
-            maxLength: 3000,
+            maxLength: 4000,
           },
           descriptionFacets: {
             type: 'array',
@@ -6463,7 +6463,7 @@ export const schemaDict = {
             description: {
               type: 'string',
               maxGraphemes: 300,
-              maxLength: 3000,
+              maxLength: 4000,
             },
             descriptionFacets: {
               type: 'array',
